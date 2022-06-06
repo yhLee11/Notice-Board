@@ -1,0 +1,9 @@
+logging:
+  config:
+    classpath: logback.xml
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yh
+    username: root
+    password: 1234
