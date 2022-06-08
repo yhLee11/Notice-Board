@@ -22,7 +22,7 @@ public class JdbcPostRepository implements PostRepository {
     private static final RowMapper<Post> postRowMapper = (resultSet, i) -> {
         long postId = resultSet.getLong("post_id");
         String memberId = resultSet.getString("member_id");
-        PostType postType = PostType.valueOf(resultSet.getString("postType"));
+        PostType postType = PostType.valueOf(resultSet.getString("post_type"));
         String title = resultSet.getString("title");
         String contents = resultSet.getString("contents");
         var createdAt = toLocalDateTime(resultSet.getTimestamp("created_at"));

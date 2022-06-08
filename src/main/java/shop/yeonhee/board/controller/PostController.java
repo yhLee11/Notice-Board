@@ -40,7 +40,6 @@ public class PostController {
         return ApiResponse.ok(postService.findUserPage(1));
     }
 
-
     @GetMapping("article/list?boardId={id}&page={pageNum}")
     public ApiResponse<List<PostDTO>> getAdminPage(@PathVariable Long id,@PathVariable Integer pageNum){
         if(id == 1){
